@@ -1,0 +1,7 @@
+
+
+## How to get back to a point and reset all changes after this point
+git reset --hard <commint_id>
+
+# after you can update your remote branch
+git push --force
