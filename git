@@ -1,3 +1,27 @@
+git
+# Set remote origin
+git remote add origin https://beemap.beeline.kz/AGPiskunov/chatbot-frontend.git
+
+# go to branch
+git checkout BRANCHNAME
+
+# create branch
+git branch NEWBRANCHNAME
+
+# delete branch 
+git branch -d branch_name
+
+# merge changes into current branch
+git merge another_branch_name
+
+# see remote urls
+git remote -v
+
+# change remote origin url
+git remote set-url origin https://beemap.beeline.kz/AGPiskunov/chatbot-backend.git
+
+# push changes from the branch into other branch
+git push origin branch1:otherBranch
 
 
 ## How to get back to a point and reset all changes after this point
