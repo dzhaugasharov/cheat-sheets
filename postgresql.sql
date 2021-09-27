@@ -1,4 +1,36 @@
-// add new value to enum
+-- creating
+CREATE TABLE clients (
+  id SERIAL PRIMARY KEY, 
+  name character varying(200) NOT NULL, 
+  phone character varying(30) NOT NULL DEFAULT "no", 
+  email character varying(200) NOT NULL,
+  company_id integer NOT NULL REFERENCES companies (id)
+);
+
+CREATE TABLE apples (
+  color CHARACTER CHECK (
+    color in ('red', 'green')
+  ), 
+  -- red or green
+  weight numeric CHECK (
+    weight >= 150 
+    OR weight <= 300
+  ) -- from 150 to 300
+);
+
+CREATE TABLE apples (
+  id SERIAL,
+  weight numeric,
+  order_id interger,
+  CONSTRAINT ch_weight_check CHECK (
+    weight >= 150 
+    AND weight <= 300
+  ),
+  CONSTRAINT apples_pk PRIMARY KEY (id), 
+  CONSTRAINT order_fk FOREIGN KEY(order_id) REFERENCES orders(id)
+);
+
+-- add new value to enum
 ALTER TYPE enum_name ADD VALUE 'new_values';
 ALTER TYPE enum_type ADD VALUE 'new_value' BEFORE 'old_value';
 ALTER TYPE enum_type ADD VALUE 'new_value' AFTER 'old_value';
