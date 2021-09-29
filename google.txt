@@ -1,0 +1,2 @@
+// searching in specific site or domain zone
+site:*.kz iphone 13
