@@ -72,3 +72,6 @@ SET
 -- ON CONFLICT DO NOTHING
 INSERT INTO products (id, name, price, category) 
 VALUES (1, 'Shampoo 2', 1200, 'cosmetic') ON CONFLICT DO NOTHING;
+
+-- date time
+SELECT current_date, current_time, extract('mon' FROM date '1999-11-27');  -- 2021-09-30  05:10:23.356401 +00:00  11
