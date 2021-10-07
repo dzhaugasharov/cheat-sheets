@@ -53,12 +53,18 @@ CREATE TABLE apples (
 ALTER TABLE products ADD COLUMN description text CHECK (description <> '');
 ALTER TABLE products DROP COLUMN description;
 ALTER TABLE products DROP COLUMN description CASCADE;
+ALTER TABLE products RENAME COLUMN name TO title;
+ALTER TABLE products RENAME TO items;
 
--- addin contraints
+-- add constraints
 ALTER TABLE products ADD CHECK (name <> 'что-то странное');
 ALTER TABLE products ADD CONSTRAINT some_name UNIQUE (name);  -- unique product name
 ALTER TABLE example ADD FOREIGN KEY (some_id) REFERENCES another_table;
 ALTER TABLE products ALTER COLUMN category SET NOT NULL;
+
+-- deleting 
+ALTER TABLE products DROP CONSTRAINT some_name;
+ALTER TABLE products ALTER COLUMN product_no DROP NOT NULL;
 
 -- add new value to enum
 ALTER TYPE enum_name ADD VALUE 'new_values';
@@ -84,7 +90,9 @@ DROP TABLE films, users;
 DROP CASCADE TABLE films, users; -- deletes with all related object
 DROP TABLE IF EXISTS films;
 
-
+-- indexes
+CREATE INDEX new_index ON clients (name, phone);
+CREATE UNIQUE INDEX email_unique_key ON clients (lower(email)); -- making unique and using lower function
 
 
 -- DML (Data Manipulation Language)
