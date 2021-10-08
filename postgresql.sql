@@ -93,6 +93,9 @@ DROP TABLE IF EXISTS films;
 -- indexes
 CREATE INDEX new_index ON clients (name, phone);
 CREATE UNIQUE INDEX email_unique_key ON clients (lower(email)); -- making unique and using lower function
+CREATE INDEX asc_index ON products (category NULLS FIRST);
+CREATE INDEX asc_index ON products (category DESC NULLS LAST);
+CREATE INDEX products_index ON products(name) WHERE price < 1000; -- partly indexing
 
 
 -- DML (Data Manipulation Language)
