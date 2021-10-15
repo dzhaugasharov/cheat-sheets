@@ -40,9 +40,13 @@ BEGIN
         END LOOP;
 END $$ LANGUAGE 'plpgsql';  -- specifying language
 
--- calling procedure
+-- calling
 DO $$ BEGIN
-CALL example_procedure('nelly');
+    -- calling procedure
+    CALL example_procedure('nelly');
+
+    -- calling function
+    PERFORM gen_abra_cadabra(100);
 END $$;
 
 -- looping throug records
