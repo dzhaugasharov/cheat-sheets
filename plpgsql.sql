@@ -58,3 +58,8 @@ DO $$ DECLARE rec RECORD;
         LOOP RAISE NOTICE 'id = %, name = %, phone = %', rec.id, rec.name, record.phone;
     END LOOP;
 END $$;
+
+
+-- dropping
+DROP PROCEDURE procedure_name;
+DROP FUNCTION function_name;
