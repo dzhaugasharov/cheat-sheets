@@ -6,3 +6,6 @@ mvn archetype:create-from-project
 
 # cleans and installs all dependencies
 mvn clean install
+
+# show all dependencies of the project
+mvn dependency: tree
