@@ -75,6 +75,9 @@ cp file1 destination
 mkdir -p "path/sdfp"
 
 
+# change to root user
+sudo -i
+
 
 # show all processes
 # A : Select all processes
