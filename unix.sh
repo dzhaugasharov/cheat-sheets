@@ -99,6 +99,14 @@ jobs
 fg %JOB_NUMBER
 
 
+# grep - search data
+grep "searching test" file.txt
+
+# find in the end of something
+tail file.txt 
+# track live
+tail -f | grep "error" file.txt
+taif -f # last 10 rows plus new lines
 
 # CURL
 curl --location --request GET 'http://domain.kz/products' --header 'Authorization: Basic ADFJSDKFHDFOS'
