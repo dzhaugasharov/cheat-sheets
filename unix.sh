@@ -74,6 +74,9 @@ cp file1 destination
 # create dir
 mkdir -p "path/sdfp"
 
+# remove dir
+rm -d forlder_name
+
 
 # change to root user
 sudo -i
