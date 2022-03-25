@@ -1,3 +1,6 @@
+# show unix version
+uname -a
+
 # copy
 cp -a ~/spring-cloud-gcp-guestbook/1-bootstrap/guestbook-frontend \
   ~/guestbook-frontend
