@@ -1,5 +1,7 @@
 # show unix version
 uname -a
+cat /etc/os-release
+uname -r
 
 # copy
 cp -a ~/spring-cloud-gcp-guestbook/1-bootstrap/guestbook-frontend \
